@@ -51,7 +51,7 @@ router.get('/google/callback', async (req, res) => {
     if (error) throw error;
 
     // Redirect to app with user ID
-    res.redirect(`myapp://auth-success?userId=${data.id}`);
+    res.redirect(`https://email-todo-backend.onrender.com/auth/success?userId=${data.id}`);
   } catch (error) {
     console.error('Auth error:', error);
     res.redirect('myapp://auth-error');
